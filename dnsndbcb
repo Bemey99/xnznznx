@@ -1,0 +1,11 @@
+-- Create the ESP box under the player's feet
+local espBox = Instance.new("BoxHandleAdornment")
+espBox.Size = Vector3.new(10, 10, 10) -- Adjust size as needed
+espBox.Color3 = Color3.new(1, 0, 0) -- Red color
+espBox.Transparency = 0 -- Non-transparent
+espBox.Adornee = game.Players.LocalPlayer.Character.HumanoidRootPart
+espBox.AlwaysOnTop = true
+espBox.Parent = game.Players.LocalPlayer.Character
+
+-- Adjust the position of the ESP box under the player's feet
+espBox.Position = game.Players.LocalPlayer.Character.HumanoidRootPart.Position + Vector3.new(0, -3, 0)
