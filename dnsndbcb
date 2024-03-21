@@ -1,11 +1,25 @@
+local hover = Instance.new("Animation", game.Workspace)
+hover.Name = "Hover"
+Hover.AnimationId = "rbxassetid://3541114300"
+local char = game.Players.LocalPlayer.Character
+local hoveranim = char.Humanoid:LoadAnimation(game.Workspace.Hover)
+
+
+local movehover = Instance.new("Animation", game.Workspace)
+movehover.Name = "MoveHover"
+movehover.AnimationId = "rbxassetid://3541044388"
+local char = game.Players.LocalPlayer.Character
+local movehoveranim = char.Humanoid:LoadAnimation(game.Workspace.MoveHover)
+
+
 -- Create the ESP box under the player's feet
 local espBox = Instance.new("BoxHandleAdornment")
 espBox.Size = Vector3.new(10, 10, 10) -- Adjust size as needed
 espBox.Color3 = Color3.new(1, 0, 0) -- Red color
-espBox.Transparency = 0 -- Non-transparent
-espBox.Adornee = game.Players.LocalPlayer.Character.HumanoidRootPart
-espBox.AlwaysOnTop = true
+espBox.Transparency = 1 --nTop = true
 espBox.Parent = game.Players.LocalPlayer.Character
 
 -- Adjust the position of the ESP box under the player's feet
 espBox.Position = game.Players.LocalPlayer.Character.HumanoidRootPart.Position + Vector3.new(0, -3, 0)
+wait(6)
+hoveranim:Play()
